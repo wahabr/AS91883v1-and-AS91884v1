@@ -32,6 +32,8 @@ def convert_temp(temp_list):
     return ans_temp
 
 convert_temp(temp_list)
+#testing home computer
+print("I have succeeded")
 
 
 
