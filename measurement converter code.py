@@ -50,10 +50,10 @@ def convert_weight(weight_list, weight_value_list):
         des_unit_weight = input("What unit would you like to convert to?").strip().lower()
         if des_unit_weight in weight_list:
             pos_weight = weight_list.index(unit_weight)
-            weight_value = weight_value_list(pos_weight)
+            weight_value = weight_value_list[pos_weight]
             value_in_grams = num_weight * weight_value
             pos_des_weight = weight_list.index(des_unit_weight)
-            des_weight_value = weight_value_list(pos_des_weight)
+            des_weight_value = weight_value_list[pos_des_weight]
             ans_weight = des_weight_value * num_weight
             print("Original Measurement Units:{}\nConverted Measurement Units:{}\nOriginal Measurement:{} {}\nConverted Measurement:{} {}".format(unit_weight, des_unit_weight, num_weight, unit_weight, ans_weight, des_unit_weight))
         else:
@@ -72,10 +72,10 @@ def convert_length(length_list, length_value_list):
         des_unit_length = input("What unit would you like to convert to?").strip().lower()
         if des_unit_length in length_list:
             pos_length = length_list.index(unit_length)
-            length_value = length_value_list(pos_length)
+            length_value = length_value_list[pos_length]
             value_in_metres = num_length * length_value
             pos_des_length = length_list.index(des_unit_length)
-            des_length_value = length_value_list(pos_des_length)
+            des_length_value = length_value_list[pos_des_length]
             ans_length = des_length_value * num_length
             print("Original Measurement Units:{}\nConverted Measurement Units:{}\nOriginal Measurement:{} {}\nConverted Measurement:{} {}".format(unit_length, des_unit_length, num_length, unit_length, ans_length, des_unit_length))
         else:
