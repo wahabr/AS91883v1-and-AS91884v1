@@ -60,7 +60,7 @@ def convert_weight(weight_list, weight_value_list):
     if unit_weight in weight_list:
         a = False
         while a is False:
-            num_weight = input("How many degrees {} would you like to convert?".format(unit_weight))
+            num_weight = input("How many {} would you like to convert?".format(unit_weight))
             a = test_float(num_weight)
             if a is False:
                 print("Please enter a valid numerical response")
@@ -72,7 +72,7 @@ def convert_weight(weight_list, weight_value_list):
             value_in_grams = float(num_weight) * weight_value
             pos_des_weight = weight_list.index(des_unit_weight)
             des_weight_value = weight_value_list[pos_des_weight]
-            ans_weight = des_weight_value * value_in_grams
+            ans_weight = value_in_grams / des_weight_value
             print("Original Measurement Units:{}\nConverted Measurement Units:{}\nOriginal Measurement:{} {}\nConverted Measurement:{} {}".format(unit_weight, des_unit_weight, num_weight, unit_weight, ans_weight, des_unit_weight))
         else:
             print("Please enter a valid weight unit")
@@ -87,7 +87,7 @@ def convert_length(length_list, length_value_list):
     if unit_length in length_list:
         a = False
         while a is False:
-            num_length = input("How many degrees {} would you like to convert?".format(unit_length))
+            num_length = input("How many {} would you like to convert?".format(unit_length))
             a = test_float(num_length)
             if a is False:
                 print("Please enter a valid numerical response")
@@ -99,7 +99,7 @@ def convert_length(length_list, length_value_list):
             value_in_metres = float(num_length) * length_value
             pos_des_length = length_list.index(des_unit_length)
             des_length_value = length_value_list[pos_des_length]
-            ans_length = des_length_value * value_in_metres
+            ans_length = value_in_metres / des_length_value
             print("Original Measurement Units:{}\nConverted Measurement Units:{}\nOriginal Measurement:{} {}\nConverted Measurement:{} {}".format(unit_length, des_unit_length, num_length, unit_length, ans_length, des_unit_length))
         else:
             print("Please enter a valid length unit")
