@@ -2,10 +2,10 @@ weight_value_list = [1, 1000, 0.001, 1000000, 1016046.08, 907184, 28.3495]
 weight_list = ["grams", "kilograms", "milligrams", "metric tons", "long tons", "short tons", "ounces"]
 temp_list = ["celsius", "fahrenheit", "kelvin"]
 length_list = ["metres", "kilometres", "centimetres", "millimetres", "miles", "yards", "feet", "inches"]
-length_value_list = [1, 1000, 0.01, 0.001, 1609.35, 0.9144, 0.3048, 0.024]
+length_value_list = [1, 1000, 0.01, 0.001, 1609.35, 0.9144, 0.3048, 0.0254]
 
 
-#Function for testing an integer
+# Function for testing a float
 def test_float(num_unit):
     try:
         float(num_unit)
@@ -13,8 +13,10 @@ def test_float(num_unit):
     except ValueError:
         return False
 
-#Function for converting temperature
+
+# Function for converting temperature
 def convert_temp(temp_list):
+    global unit_temp
     print("These are your options: {}".format(temp_list))
     a = False
     while a is False:
@@ -60,7 +62,7 @@ def convert_temp(temp_list):
 
 
 
-#Function for converting weight
+# Function for converting weight
 def convert_weight(weight_list, weight_value_list):
     print("These are your options: {}".format(weight_list))
     a = False
@@ -94,7 +96,7 @@ def convert_weight(weight_list, weight_value_list):
 
 
 
-#Function for converting length
+# Function for converting length
 def convert_length(length_list, length_value_list):
     print("These are your options: {}".format(length_list))
     a = False
